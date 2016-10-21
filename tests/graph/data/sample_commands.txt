@@ -1,0 +1,8 @@
+LOAD CSV WITH HEADERS FROM "file:///F:/program/survey_tools/test_cases/graph/data/sample_nodes.csv" AS csvLine
+CREATE (n:Person {id: toInt(csvLine.id), name: csvLine.name})
+
+
+LOAD CSV WITH HEADERS FROM "file:///F:/program/survey_tools/test_cases/graph/data/sample_edges.csv" AS csvLine
+MATCH (m:Person), (n:Person)
+WHERE m.name = csvLine.start AND n.name = csvLine.end
+CREATE (m)-[r:FRIEND {weight: toFloat(csvLine.weight)}]->(n)
