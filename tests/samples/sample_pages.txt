@@ -1,2 +1,11 @@
 rubyからグラフデータベースneo4jを利用する
 http://qiita.com/k-shogo/items/fce39fd5fe6c474586a7
+
+Rubyからneo4jrb/neo4jを使ってneo4jにアクセスする
+http://qiita.com/awwa/items/2d2c28f34f0796a30bce
+
+グラフDBのNeo4jを1日触ってみた
+http://engineer.wantedly.com/2014/01/02/neo4j-introduction.html
+
+RubyとグラフデータベースNeo4jでソーシャルデータをいじくる
+http://archive.fo/SYNBF#selection-947.173-947.185

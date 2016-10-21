@@ -10,7 +10,7 @@ function log_info_() { log_info "$1" "$LOG_FILE";}
 
 ## package check
 log_info_ 'package check start.'
-PACKAGES=(default-jre java default-jdk)
+PACKAGES=(default-jre default-jdk)
 for package in ${PACKAGES[@]}; do
 	dpkg -l $package | grep -E "^i.+[ \t]+$package" > /dev/null
 	if [ $? -ne 0 ];then
@@ -20,7 +20,7 @@ for package in ${PACKAGES[@]}; do
 	fi
 done
 
-PACKAGES=(neography activesupport)
+PACKAGES=(neography neo4j-cypher activesupport test-unit poppler gobject-introspection gio2)
 for package in ${PACKAGES[@]}; do
 	gem list | grep $package > /dev/null 2>&1
 	if [ $? -ne 0 ];then
@@ -33,17 +33,5 @@ done
 log_info_ 'package check finished.'
 
 
-log_info_ 'neo4j install start.'
-
-if [ `hostname | grep 'ubuntu'` ] ; then
-	VERSION='3.0.6'
-  tar xzf "neo4j-community-$VERSION-unix.tar.gz"
-  ./neo4j-community-$VERSION/bin/neo4j
-  #rm -rf "neo4j-community-$VERSION"
-fi
-
-log_info_ 'neo4j install finished.'
-
-pwd
 cd $pwd
 exit 0
