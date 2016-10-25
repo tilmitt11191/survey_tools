@@ -1,23 +1,183 @@
-Loaded suite ../../tests/pdf/pdf_test
+Loaded suite ../../tests/web/ieeexplore_test
 Started
-pdf_test.rb start.
-test_get_title_of_sample3.pdf start.
-get_authors_of start.
-
-get_authors_of finished.
-F
+ieeexplore_test.rb start.
+IEEEXplore::initialize start.
+IEEEXplore::initialize finished.
+IEEEXplore_TEST::test_get_searched_page_src_of_sample2 start.
+IEEEXplore::get_toppage start.
+Web::get start.
+Web::get finished.
+IEEEXplore::get_toppage finished.
+IEEEXplore::get_searched_page_of start.
+texts
+hiddens
+textareas
+reset
+keygens
+submit_button?
+name
+reset_button?
+text_field?
+[]
+[]=
+request_data
+hidden_field?
+textarea_field?
+dom_id
+dom_class
+add_field!
+page
+fields_with
+click_button
+set_fields
+save_hash_field_order
+keys
+values
+pretty_print
+has_key?
+has_value?
+delete_field!
+file_upload
+radiobutton
+checkbox
+inspect
+method_missing
+method=
+button
+action=
+button_with
+elements
+ignore_encoding_error=
+submit
+select_fields
+encoding
+buttons_with
+buttons
+field_with!
+file_uploads_with
+select_buttons
+field_with
+file_upload_with!
+select_file_uploads
+field
+enctype=
+radiobuttons_with
+select_radiobuttons
+file_upload_with
+file_uploads
+fields
+select_checkboxes
+radiobutton_with
+radiobutton_with!
+add_button_to_query
+build_query
+button_with!
+checkbox_with!
+checkboxes_with
+encoding=
+checkbox_with
+method
+radiobuttons
+action
+ignore_encoding_error
+form_node
+checkboxes
+name=
+has_field?
+submits
+enctype
+resets
+to_json
+to_yaml
+to_yaml_properties
+blank?
+psych_to_yaml
+as_json
+in?
+acts_like?
+present?
+presence
+duplicable?
+deep_dup
+presence_in
+to_param
+to_query
+instance_values
+instance_variable_names
+with_options
+try
+try!
+pretty_print_cycle
+pretty_print_instance_variables
+pretty_print_inspect
+instance_of?
+public_send
+instance_variable_get
+instance_variable_set
+instance_variable_defined?
+remove_instance_variable
+private_methods
+kind_of?
+instance_variables
+tap
+public_method
+singleton_method
+is_a?
+extend
+define_singleton_method
+to_enum
+enum_for
+pretty_inspect
+<=>
+===
+=~
+!~
+eql?
+respond_to?
+freeze
+display
+object_id
+send
+to_s
+nil?
+hash
+class
+singleton_class
+clone
+dup
+itself
+taint
+tainted?
+untaint
+untrust
+trust
+untrusted?
+methods
+protected_methods
+frozen?
+public_methods
+singleton_methods
+!
+==
+!=
+__send__
+equal?
+instance_eval
+instance_exec
+__id__
+-------------
+E
 ===============================================================================
-Failure: test_get_title_of_sample3.pdf(PDF_TEST)
-../../tests/pdf/pdf_test.rb:68:in `block in <class:PDF_TEST>'
-<"FDASH: A Fuzzy-Based MPEG/DAS Adaptation Algorithm"> expected but was
-<"">
+Error: test_get_searched_page_src_of_sample2(IEEEXplore_TEST): NoMethodError: undefined method `body' for #<Array:0x00000003cf5988>
+/media/sf_f/program/survey_tools/lib/web/ieeexplore.rb:63:in `get_searched_page_of'
+../../tests/web/ieeexplore_test.rb:49:in `block in <class:IEEEXplore_TEST>'
 ===============================================================================
-pdf_test.rb finished.
+ieeexplore_test.rb finished.
 
 
-Finished in 0.117982888 seconds.
+Finished in 5.821806123 seconds.
 ------
-1 tests, 1 assertions, 1 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+1 tests, 0 assertions, 0 failures, 1 errors, 0 pendings, 0 omissions, 0 notifications
 0% passed
 ------
-8.48 tests/s, 8.48 assertions/s
+0.17 tests/s, 0.00 assertions/s

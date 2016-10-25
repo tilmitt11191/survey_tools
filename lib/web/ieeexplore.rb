@@ -7,38 +7,71 @@ require '../../lib/web/web.rb'
 
 class IEEEXplore
 	@log
+	@webpages
+	@toppage
 	
 	def initialize log
 		@log = log
-		Log::method_start __method__, @log
-		@log.debug 'nothing to do at IEEEXplore.initialize'
-		Log::method_finished __method__, @log
+		Log::method_start "#{self.class}::#{__method__}", @log
+		@webpages = Web.new
+		Log::method_finished "#{self.class}::#{__method__}", @log
 	end
 	
-	def get_attributions_of pdf
-		Log::method_start __method__, @log
+	def get_attributions_of pdf_filename
+		Log::method_start "#{self.class}::#{__method__}", @log
 		get_toppage
-		
-		Log::method_finished __method__, @log
+		get_searched_page_of pdf_filename
+		Log::method_finished "#{self.class}::#{__method__}", @log
 		return 'aaa', [1,2,3]
 	end
+
 	
 	def get_toppage html_output_filename=nil
-		Log::method_start __method__, @log
+		Log::method_start "#{self.class}::#{__method__}", @log
 		top_url = 'http://ieeexplore.ieee.org/Xplore/home.jsp'
 		if !Web::url_exists? top_url, @log then
 			@log.error "IEEE top url not exist.[#{top_url}] return nil"
 			return nil
 		end
-		
-		page = Web.new
-		page.get_dom_of top_url, @log
+
+		@top_page = @webpages.get top_url, @log
 		
 		if !html_output_filename.nil? then
-			page.output_html_src_to html_output_filename, @log
+			@top_page.output_html_src_to html_output_filename, @log
 		end
 		
-		Log::method_finished __method__, @log
+		Log::method_finished "#{self.class}::#{__method__}", @log
+	end
+
+
+	def get_searched_page_of query, html_output_filename=nil
+		Log::method_start "#{self.class}::#{__method__}", @log
+		@log.debug "query[#{query}], html_output_filename[#{html_output_filename}]"
+		
+		if @top_page.nil? then
+			@log.error '@top_page is nil. return nil.'
+			return nil
+		end
+		
+		form = @top_page.form_with(:name => 'search_form')
+		form.field_with(:name => 'queryText').value = query
+		searched_results = form.submit
+		
+		
+		
+		#form = @top_page.form_with(:name => 'search_form')
+		#form.field_with(:name => 'queryText').value = query
+		#search_results = form.submit
+		#@top_page.forms.each do |form|
+		#	puts form.name
+		#end
+		#@top_page.forms[0].q = query
+
+		if !html_output_filename.nil? then
+			@webpages.get_src_from_mechanize searched_results, html_output_filename, @log
+		end
+
+		Log::method_finished "#{self.class}::#{__method__}", @log
 	end
 
 end
@@ -72,8 +105,8 @@ end
 	end
 	
 	def create_pointranking_list outputfilename, url, packname_short
-		puts "#{__method__}(#{outputfilename}, #{url}) #{packname_short} start."
-		@log.info "#{__method__}(#{outputfilename}, #{url}) #{packname_short} start."
+		puts "#{"#{self.class}::#{__method__}"}(#{outputfilename}, #{url}) #{packname_short} start."
+		@log.info "#{"#{self.class}::#{__method__}"}(#{outputfilename}, #{url}) #{packname_short} start."
 		
 		@database = WisdomGuild.new(@log)
 		
@@ -85,11 +118,11 @@ end
 		#@web.output_html_src_to('src.html', @log)
 		get_cardnames_and_scores packname_short
 		output_cardnames_and_scores_to outputfilename
-		@log.info "#{__method__} finished."
+		@log.info "#{"#{self.class}::#{__method__}"} finished."
 	end
 	
 	def get_cardnames_and_scores packname_short
-		puts "#{__method__} start."
+		puts "#{"#{self.class}::#{__method__}"} start."
 		@html.css('td/center').each do |element|
 			if /[0-9]/ =~ element.inner_text
 				score = element.inner_text.gsub(/\s|\n/,"")
@@ -103,7 +136,7 @@ end
 	end
 	
 	def get_cardname_by_number(number, packname_short)
-		@log.info "#{__method__} start."
+		@log.info "#{"#{self.class}::#{__method__}"} start."
 		case packname_short
 		when 'EMN' then
 			url = "http://whisper.wisdom-guild.net/card/EMN#{number}"
@@ -130,7 +163,7 @@ end
 	end
 	
 	def output_cardnames_and_scores_to outputfilename
-		@log.info "#{__method__}(#{outputfilename}) start."
+		@log.info "#{"#{self.class}::#{__method__}"}(#{outputfilename}) start."
 		if outputfilename.blank? then
 			@log.info "outputfilename is blank. not output."
 			return false

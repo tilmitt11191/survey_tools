@@ -1,6 +1,9 @@
 
 #bash
 export LANG=C
+
+BINDIR=~/bin/
+
 pwd=`pwd`
 cd `dirname $0`
 
@@ -20,7 +23,7 @@ for package in ${PACKAGES[@]}; do
 	fi
 done
 
-PACKAGES=(neography neo4j-cypher activesupport test-unit poppler gobject-introspection gio2)
+PACKAGES=(neography neo4j-cypher activesupport test-unit poppler gobject-introspection gio2 watir-webdriver)
 for package in ${PACKAGES[@]}; do
 	gem list | grep $package > /dev/null 2>&1
 	if [ $? -ne 0 ];then
@@ -30,6 +33,11 @@ for package in ${PACKAGES[@]}; do
 	fi
 done
 
+#log_info_ "get chromedriver for watir-webdriver"
+#wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -p ./
+#unzip chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip.
+wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -p ./
+tar xzf github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
 log_info_ 'package check finished.'
 
 

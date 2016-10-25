@@ -19,7 +19,7 @@ class PDF
 	@date
 	@text
 	
-	attr_accessor :title, :authors, :date, :text
+	attr_accessor :full_filename, :title, :authors, :date, :text
 
 	def initialize filename, log
 		@log = log
@@ -33,7 +33,7 @@ class PDF
 	end
 	
 	def get_attributions_of pdf
-		Log::method_start __method__, @log
+		Log::method_start "#{self.class}::#{__method__}", @log
 		filename = File.basename(@full_filename)
 		
 		@title = @pdf.title
@@ -51,27 +51,27 @@ class PDF
 		
 		@log.debug "@pdf.title or @pdf.author by IEEEXplore is blank. set  filename manually [#{filename}]"
 		
-		Log::method_finished __method__,@log
+		Log::method_finished "#{self.class}::#{__method__}",@log
 	end
 	
 	def get_authors_from pdf
-		Log::method_start __method__, @log
+		Log::method_start "#{self.class}::#{__method__}", @log
 		puts @pdf.author
 		@authors = @pdf.author.gsub(' ','').split(',')
 		@authors.each do |author|
 			puts author
 		end
-		Log::method_finished __method__,@log
+		Log::method_finished "#{self.class}::#{__method__}",@log
 		@authors
 	end
 	
 	def add_to_db
-		Log::method_start __method__,@log
+		Log::method_start "#{self.class}::#{__method__}",@log
 		puts "title: #{@title}"
 		puts "author: #{@author}"
 		puts "date: #{@date}"
 		
-		Log::method_finished __method__,@log
+		Log::method_finished "#{self.class}::#{__method__}",@log
 	end
 	
 	def get_full_text
