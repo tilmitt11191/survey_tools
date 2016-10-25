@@ -19,14 +19,9 @@ begin
 	@log.info File.basename(__FILE__).to_s + " start."
 	@log.info ""
 	
-	
-	pdf = PDF::read_pdf FILENAME
-	puts pdf
-	
-	#pdf.title.add_to_db
-	#pdf.author.add_to_db
-	#pdf.text.add_to_db
-	
+	pdf = PDF.new(FILENAME)
+	pdf.add_to_db
+
 rescue => e
 	write_error_to_log(e,@log)
 end

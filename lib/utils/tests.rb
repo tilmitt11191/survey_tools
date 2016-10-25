@@ -18,15 +18,6 @@ module Test::Unit
 				end
 			end
 		end
-		
-		def method_start name, log
-			puts "#{name} start."
-			log.info "#{name} start."
-		end
 
-		def method_finished name, log
-			puts "#{name} finished."
-			log.info "#{name} finished."
-		end
 	end
 end
