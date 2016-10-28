@@ -16,6 +16,7 @@ class PDF
 	
 	@title
 	@authors
+	@cites
 	@date
 	@text
 	
