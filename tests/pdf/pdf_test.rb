@@ -80,7 +80,7 @@ class PDF_TEST < Test::Unit::TestCase
 		Log::method_finished "#{self.class}::#{__method__}", @log
 	end
 =end
-#=begin
+=begin
 	must "get author of sample2.pdf" do
 		Log::method_start "#{self.class}::#{__method__}", @log
 		pdf = PDF.new '../../tests/pdf/sample/sample2.pdf', @log
@@ -91,7 +91,7 @@ class PDF_TEST < Test::Unit::TestCase
 		assert_equal 'PeriklisChatzimisios', pdf.authors[4]
 		Log::method_finished "#{self.class}::#{__method__}", @log
 	end
-#=end
+=end
 =begin
 	must "add_to_db of sample1.pdf" do
 		Log::method_start "#{self.class}::#{__method__}", @log

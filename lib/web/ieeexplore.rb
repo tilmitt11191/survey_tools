@@ -21,8 +21,10 @@ class IEEEXplore
 		Log::method_start "#{self.class}::#{__method__}", @log
 		get_toppage
 		get_searched_page_of pdf_filename
+		@log.warn 'This method have not completed because cannot handle jsp with nokogiri.'
+		@log.warn 'return title[nil], authors[nil]'
 		Log::method_finished "#{self.class}::#{__method__}", @log
-		return 'aaa', [1,2,3]
+		return nil, nil
 	end
 
 	

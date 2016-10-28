@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  src_id: 1
+  dst_id: 1
+  type: 
+  strength: 1.5
+
+two:
+  src_id: 1
+  dst_id: 1
+  type: 
+  strength: 1.5

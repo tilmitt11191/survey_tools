@@ -36,10 +36,17 @@ done
 #log_info_ "get chromedriver for watir-webdriver"
 #wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -p ./
 #unzip chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip.
-wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -p ./
-tar xzf github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
+#wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -p ./
+#tar xzf github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
+
 log_info_ 'package check finished.'
 
+log_info_ 'create mysql user.'
+log_info_ 'create mysql tables.'
+
+#echo "org.neo4j.server.webserver.address=0.0.0.0" > ../../bin/neo4j-community-3.0.6/conf/neo4j-server.properties
+
+log_info_ 'install finished.'
 
 cd $pwd
 exit 0

@@ -1,183 +1,77 @@
-Loaded suite ../../tests/web/ieeexplore_test
-Started
-ieeexplore_test.rb start.
-IEEEXplore::initialize start.
-IEEEXplore::initialize finished.
-IEEEXplore_TEST::test_get_searched_page_src_of_sample2 start.
-IEEEXplore::get_toppage start.
-Web::get start.
-Web::get finished.
-IEEEXplore::get_toppage finished.
-IEEEXplore::get_searched_page_of start.
-texts
-hiddens
-textareas
-reset
-keygens
-submit_button?
-name
-reset_button?
-text_field?
-[]
-[]=
-request_data
-hidden_field?
-textarea_field?
-dom_id
-dom_class
-add_field!
-page
-fields_with
-click_button
-set_fields
-save_hash_field_order
-keys
-values
-pretty_print
-has_key?
-has_value?
-delete_field!
-file_upload
-radiobutton
-checkbox
-inspect
-method_missing
-method=
-button
-action=
-button_with
-elements
-ignore_encoding_error=
-submit
-select_fields
-encoding
-buttons_with
-buttons
-field_with!
-file_uploads_with
-select_buttons
-field_with
-file_upload_with!
-select_file_uploads
-field
-enctype=
-radiobuttons_with
-select_radiobuttons
-file_upload_with
-file_uploads
-fields
-select_checkboxes
-radiobutton_with
-radiobutton_with!
-add_button_to_query
-build_query
-button_with!
-checkbox_with!
-checkboxes_with
-encoding=
-checkbox_with
-method
-radiobuttons
-action
-ignore_encoding_error
-form_node
-checkboxes
-name=
-has_field?
-submits
-enctype
-resets
-to_json
-to_yaml
-to_yaml_properties
-blank?
-psych_to_yaml
-as_json
-in?
-acts_like?
-present?
-presence
-duplicable?
-deep_dup
-presence_in
-to_param
-to_query
-instance_values
-instance_variable_names
-with_options
-try
-try!
-pretty_print_cycle
-pretty_print_instance_variables
-pretty_print_inspect
-instance_of?
-public_send
-instance_variable_get
-instance_variable_set
-instance_variable_defined?
-remove_instance_variable
-private_methods
-kind_of?
-instance_variables
-tap
-public_method
-singleton_method
-is_a?
-extend
-define_singleton_method
-to_enum
-enum_for
-pretty_inspect
-<=>
-===
-=~
-!~
-eql?
-respond_to?
-freeze
-display
-object_id
-send
-to_s
-nil?
-hash
-class
-singleton_class
-clone
-dup
-itself
-taint
-tainted?
-untaint
-untrust
-trust
-untrusted?
-methods
-protected_methods
-frozen?
-public_methods
-singleton_methods
-!
-==
-!=
-__send__
-equal?
-instance_eval
-instance_exec
-__id__
--------------
-E
-===============================================================================
-Error: test_get_searched_page_src_of_sample2(IEEEXplore_TEST): NoMethodError: undefined method `body' for #<Array:0x00000003cf5988>
-/media/sf_f/program/survey_tools/lib/web/ieeexplore.rb:63:in `get_searched_page_of'
-../../tests/web/ieeexplore_test.rb:49:in `block in <class:IEEEXplore_TEST>'
-===============================================================================
-ieeexplore_test.rb finished.
-
-
-Finished in 5.821806123 seconds.
-------
-1 tests, 0 assertions, 0 failures, 1 errors, 0 pendings, 0 omissions, 0 notifications
-0% passed
-------
-0.17 tests/s, 0.00 assertions/s
+../../bin/neo4j-community-3.0.6/conf/neo4j-server.properties:org.neo4j.server.webserver.address=0.0.0.0
+../../bin/neo4j-community-3.0.6/conf/neo4j.conf:# dbms.connector.bolt.address=0.0.0.0:7687
+../../bin/neo4j-community-3.0.6/conf/neo4j.conf:#dbms.connector.http.address=0.0.0.0:7474
+../../bin/neo4j-community-3.0.6/conf/neo4j.conf:# To accept non-local HTTPS connection, change 'localhost' to '0.0.0.0'
+../../bin/neo4j-community-3.0.6/conf/neo4j.conf:# The network interface IP the shell will listen on (use 0.0.0.0 for all interfaces).
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:05:39.640+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:a554:af8:10cf:923d%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:05:39.641+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:05:59.060+0000 INFO  [o.n.k.i.DiagnosticsManager] Neostore records:
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:05:59.080+0000 INFO  [o.n.k.i.DiagnosticsManager] STORE_VERSION (Store format version): 15531981201765894
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:05:59.090+0000 INFO  [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:10:57.000+0000 INFO  [o.n.k.i.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/alladmin/f/program/survey_tools/bin/neo4j-community-3.0.6
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:10:57.000+0000 INFO  [o.n.k.i.DiagnosticsManager] dbms.directories.import=import
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:10:57.010+0000 INFO  [o.n.k.i.DiagnosticsManager] SYSTEM_PROPERTIES
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:10:57.010+0000 INFO  [o.n.k.i.DiagnosticsManager] LINUX_SCHEDULERS
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:10:57.010+0000 INFO  [o.n.k.i.DiagnosticsManager] NETWORK
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:11:00.365+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:b762:97db:e75c:f692%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:11:00.366+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:11:29.070+0000 INFO  [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.id: 2016-10-21T16:07:57+0900 - 9.00 B
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:12:31.931+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:b762:97db:e75c:f692%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:12:31.931+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.050+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/rhino-1.7R4.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.050+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-cypher-compiler-3.0-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.050+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/jersey-core-1.19.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/jetty-util-9.2.9.v20150224.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/scala-reflect-2.11.8.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/commons-beanutils-1.8.3.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/server-api-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/lucene-core-5.5.0.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/commons-io-2.4.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-cypher-compiler-2.3-2.3.7.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/opencsv-2.3.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-cypher-frontend-3.0-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-security-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:07.080+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/javax.servlet-api-3.1.0.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:08.012+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:d548:475:dc7a:16a2%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:08.012+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:21:33.000+0000 INFO  [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore: used=0 high=-1
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:53:59.516+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:f937:4394:a570:e3f7%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-21 07:53:59.517+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:33:49.090+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/jersey-core-1.19.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:33:49.090+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-shell-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:33:49.090+0000 INFO  [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/media/sf_f/program/survey_tools/bin/neo4j-community-3.0.6/lib/neo4j-common-3.0.6.jar
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:33:49.315+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:9edb:7fea:d32:4dc%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:33:49.318+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:34:31.070+0000 INFO  [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore: used=3 high=2
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-25 00:34:33.070+0000 INFO  [o.n.k.i.DiagnosticsManager]   - Total: 2016-10-21T16:05:51+0900 - 18.28 kB
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:47:06.892+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:8814:573a:9387:d4c1%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:47:06.892+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:47:59.030+0000 INFO  [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels: 2016-10-21T16:05:45+0900 - 8.00 kB
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:47:59.090+0000 INFO  [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2016-10-27T09:47:45+0900 - 9.00 B
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:48:17.664+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:8814:573a:9387:d4c1%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:48:17.665+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:48:31.030+0000 INFO  [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/alladmin/f/program/survey_tools/bin/neo4j-community-3.0.6/data/databases/graph.db/neostore.propertystore.db.arrays] ...
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:48:35.080+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 00:48:35.090+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 01:55:09.565+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:bc1a:620b:e3f1:9ab9%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 01:55:09.566+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 01:55:43.060+0000 INFO  [o.n.k.i.DiagnosticsManager] Store versions:
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:54:16.000+0000 INFO  [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=34.00 MB, used=21.22 MB, max=988.00 MB, threshold=0.00 B
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:54:16.000+0000 INFO  [o.n.k.i.DiagnosticsManager] Operating system information:
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:54:16.010+0000 INFO  [o.n.k.i.DiagnosticsManager] Number of open file descriptors: 96
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:54:22.423+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:4be:1961:36b7:3441%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:54:22.427+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 02:55:31.060+0000 INFO  [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=2 high=1
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 03:03:56.668+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:4be:1961:36b7:3441%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-27 03:03:56.672+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.010+0000 INFO  [o.n.k.i.DiagnosticsManager] SYSTEM_PROPERTIES
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.010+0000 INFO  [o.n.k.i.DiagnosticsManager] LINUX_SCHEDULERS
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.010+0000 INFO  [o.n.k.i.DiagnosticsManager] NETWORK
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.010+0000 INFO  [o.n.k.i.DiagnosticsManager] System memory information:
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.080+0000 INFO  [o.n.k.i.DiagnosticsManager] Free swap space: 2.00 GB
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:08.080+0000 INFO  [o.n.k.i.DiagnosticsManager] JVM memory information:
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:12.399+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:38e:2cde:804d:4ec3%enp0s3
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:12.403+0000 INFO  [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:50.010+0000 INFO  [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2016-10-28T11:40:14+0900 - 9.00 B
+../../bin/neo4j-community-3.0.6/logs/debug.log:2016-10-28 07:49:50.070+0000 INFO  [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels: 2016-10-27T12:04:00+0900 - 8.00 kB
+../../bin/neo4j-community-3.0.6/logs/neo4j.log:2016-10-21 07:07:58.000+0000 INFO  Stopped.

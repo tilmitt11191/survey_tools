@@ -11,7 +11,7 @@ require 'watir-webdriver'
 
 class Web
 	@html_row_data
-	@page_cache #Hash key:url value:Mechanize.get
+	@page_cache #Hash key:url value:Mechanize
 	@html_cache #Hash key:url value:html_row_data
 	@dom
 	#attr_accessor :dom, :page_cache
@@ -49,14 +49,14 @@ class Web
 	def get url, log
 		Log::method_start "#{self.class}::#{__method__}", log
 		if !@page_cache[url].nil? then
-			log.debug "url[#{url}] page_cached. return cached page. the title of url[#{url}] is [#{@page_cache[url].title}]."
+			log.debug "url[#{url}] page_cached. return cached Mechanize page. the title of url[#{url}] is [#{@page_cache[url].title}]."
 			return @page_cache[url]
 		end
 		
 		agent = Mechanize.new
 		page = agent.get(url)
 		@page_cache[url] = page
-		log.debug "url[#{url}] page not cached. return page and cache [#{@page_cache[url].title}]."
+		log.debug "url[#{url}] page not cached. return Mechanize page and cache [#{@page_cache[url].title}]."
 		Log::method_finished "#{self.class}::#{__method__}", log
 		return page
 	end
