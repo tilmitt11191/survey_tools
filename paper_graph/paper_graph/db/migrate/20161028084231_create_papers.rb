@@ -1,7 +1,7 @@
 class CreatePapers < ActiveRecord::Migration
   def change
     create_table :papers do |t|
-      t.integer :id
+      t.integer :paper_id
       t.string :title
       t.text :text
 

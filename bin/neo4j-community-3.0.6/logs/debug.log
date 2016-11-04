@@ -8087,3 +8087,24 @@ Storage files: (filename : modification date - size)
 2016-10-28 08:04:16.208+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 296ms.
 2016-10-28 08:04:16.600+0000 INFO  [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
 2016-10-28 08:49:06.780+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 202ms.
+2016-10-28 09:18:02.088+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 17840ms.
+2016-10-31 01:11:28.098+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 230ms.
+2016-10-31 01:11:34.008+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 235ms.
+2016-10-31 01:16:51.751+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 214ms.
+2016-10-31 09:46:43.908+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 472ms.
+2016-11-01 00:50:21.522+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 226ms.
+2016-11-01 09:08:55.419+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 1028ms.
+2016-11-01 23:09:00.481+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 1905ms.
+2016-11-02 00:31:02.768+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 530ms.
+2016-11-02 00:31:04.163+0000 INFO  [o.n.k.i.f.CommunityFacadeFactory] Shutdown started
+2016-11-02 00:31:04.238+0000 INFO  [o.n.k.i.f.CommunityFacadeFactory] Database is now unavailable
+2016-11-02 00:31:04.472+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Starting check pointing...
+2016-11-02 00:31:04.481+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Starting store flush...
+2016-11-02 00:31:04.821+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Store flush completed
+2016-11-02 00:31:04.833+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Starting appending check point entry into the tx log...
+2016-11-02 00:31:05.056+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Appending check point entry into the tx log completed
+2016-11-02 00:31:05.073+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [54]:  Check pointing completed
+2016-11-02 00:31:05.085+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-11-02 00:31:05.098+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-11-02 00:31:06.337+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics START ---
+2016-11-02 00:31:06.337+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics END ---

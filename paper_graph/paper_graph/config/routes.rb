@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'paper_graph/index'
+
+  get 'paper_graph/show'
+
   resources :relations
   resources :papers
   resources :papers

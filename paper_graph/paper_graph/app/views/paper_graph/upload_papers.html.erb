@@ -1,0 +1,7 @@
+<h1>画像アップロード</h1>
+
+<%= render partial: 'upload_papers_form',  locals: { paper_id: @paper_id } %>
+
+<br>
+<%= link_to 'アルバムへ戻る', {:controller => 'albums',:action => 'show_pictures'}, {:class => 'btn btn-default btn-sm'} %>
+<%= link_to 'トップページに戻る',  {:controller => 'top_pages',:action => 'home'}, {:class => 'btn btn-default btn-sm'} %>

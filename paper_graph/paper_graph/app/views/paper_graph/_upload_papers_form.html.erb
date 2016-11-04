@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag 'dropzone/basic' %>
+<%= stylesheet_link_tag 'dropzone/dropzone' %>
+
+<style>
+.dropzone {
+  border: 2px dashed #b4bcc2;
+  @include border-radius(4px);
+
+  .dz-message {
+    font-size: 16px;
+    text-align: center;
+    margin: 0
+  }
+}
+</style>
+
+<%= form_tag(@albums, class: 'dropzone', id: 'upload-dropzone', remote: true, authenticity_token: true) do %>
+  <div class="fallback">
+    <%= file_field_tag('picture[image]') %>
+  </div>
+<% end %>
+
+<%= javascript_include_tag 'dropzone' %>
