@@ -1,0 +1,89 @@
+   <html>
+   <head>
+   jQuery Test Project
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="&lt;a href=" https:="" ajax.googleapis.com="" ajax="" libs="" jquery="" 3.1.0="" jquery.min.js"="" rel="nofollow">https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <body>
+ 
+ <style>
+ body 
+ { 
+font: 14px helvetica neue, helvetica, arial, sans-serif;
+ } 
+#cy
+ {
+height: 60%;
+width: 60%;
+position: absolute;
+left: 0;
+top: 0;
+  } 
+</style>  
+
+Select Bait Protein
+ CASP9.cyjs
+    
+ 
+
+ <script type="text/javascript">   
+</script>   
+ </head>
+<body>
+
+    $(function() { 
+    var test;
+    $.get( 'cy', function( data ) {
+    $('#cy').cytoscape({
+     file_name = $("select").val();
+     });
+  $('#cy').load(file_name);
+      style: cytoscape.stylesheet()
+          .selector('node')
+          .css({
+          'content': 'data(name)',
+              'text-valign': 'center',
+              'color': 'white',
+              'text-outline-width': 2,
+              'text-outline-color': '#888'
+      })
+          .selector('edge')
+          .css({
+          'target-arrow-shape': 'square'
+              'width': 5,
+              'line-color': '#ddd',
+      })
+          .selector(':selected')
+          .css({
+          'background-color': 'black',
+              'line-color': 'black',
+              'target-arrow-color': 'black',
+              'source-arrow-color': 'black'
+      })
+          .selector('.faded')
+          .css({
+          'opacity': 0.25,
+              'text-opacity': 0
+      }),
+      elements : JSON.parse(data),
+
+      ready: function() {
+          window.cy = this;
+          cy.elements().unselectify();
+
+          cy.on('tap', 'node', function(e) {
+              var node = e.cyTarget;
+              var neighborhood = node.neighborhood().add(node);
+              cy.elements().addClass('faded');
+              neighborhood.removeClass('faded');
+          });
+
+          cy.on('tap', 'edge', function(e) {
+              if (e.cyTarget === cy) {
+                  cy.elements().removeClass('faded');
+              }
+          });
+      }
+
+  })
+  })
+  });
