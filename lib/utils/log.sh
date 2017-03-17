@@ -1,9 +1,11 @@
 
 #!/bin/bash
 export LANG=C
-LOG_LEVEL=DEBUG
-rotate_size=100000 #line
-LOG_FILE=../../var/log/log
+source ../../lib/utils/getconf.sh
+LOG_FILE=`getconf "logdir"``getconf "logfile"`
+LOG_LEVEL=`getconf "loglevel"`
+rotate_size=`getconf "log_rotate_size"`
+
 
 function rotate_logfile(){
 	if [ ! -z $1 ];then
@@ -13,7 +15,7 @@ function rotate_logfile(){
 	if [ ! -e $LOG_FILE ];then
 		:> $LOG_FILE
 	fi
-
+	
 	logfile_line_num=`wc -l < $LOG_FILE`
 	if [ $logfile_line_num -ge $rotate_size ];then
 		last_logfile=`ls $LOG_FILE* | xargs -i basename {} | tail -n 1`
@@ -29,7 +31,7 @@ function rotate_logfile(){
 
 function log_debug() {
 	if [ $LOG_LEVEL == "DEBUG" ];then
-		if [ -n $2 ];then
+		if [ -n "$2" ];then
 			LOG_FILE=$2
 		fi
 		rotate_logfile $LOG_FILE
@@ -39,18 +41,18 @@ function log_debug() {
 
 function log_info() {
 	if [ $LOG_LEVEL == "DEBUG" -o $LOG_LEVEL == "INFO" ];then
-		if [ -n $2 ];then
+		if [ -n "$2" ];then
 			LOG_FILE=$2
 		fi
 		rotate_logfile $LOG_FILE
-		echo $1
+		#echo $1
 		echo "--------"`date +%Y%m%d%H%M%S` $0 "--------" >> $LOG_FILE;echo -e "[INFO] $1" >> $LOG_FILE
 	fi
 }
 
 function log_warning(){
 	if [ $LOG_LEVEL == "DEBUG" -o $LOG_LEVEL == "INFO" -o $LOG_LEVEL == "WARN" ];then
-		if [ -n $2 ];then
+		if [ -n "$2" ];then
 			LOG_FILE=$2
 		fi
 		rotate_logfile $LOG_FILE
@@ -62,7 +64,7 @@ function log_warning(){
 
 function log_fatal(){
 	if [ $LOG_LEVEL == "DEBUG" -o $LOG_LEVEL == "INFO" -o $LOG_LEVEL == "WARN" -o $LOG_LEVEL == "FATAL" ];then
-		if [ -n $2 ];then
+		if [ -n "$2" ];then
 			LOG_FILE=$2
 		fi
 		rotate_logfile $LOG_FILE

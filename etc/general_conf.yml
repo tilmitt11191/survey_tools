@@ -1,0 +1,5 @@
+
+logdir: ../../var/log/
+logfile: log
+loglevel: DEBUG
+log_rotate_size: 100000
