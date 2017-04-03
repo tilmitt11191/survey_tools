@@ -1,0 +1,16 @@
+1491203799341	geckodriver	INFO	Listening on 127.0.0.1:50583
+1491203800236	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.bcsVLZFPDQYK
+1491203800241	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1491203800279	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41834
+1491203830379	Marionette	INFO	Listening on port 41834
+1491203854630	Marionette	INFO	startBrowser 8a5766f8-3ea2-48c3-8522-c27786aa74cf
+
+(firefox:13736): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:13736): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:13736): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:13736): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:13736): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed

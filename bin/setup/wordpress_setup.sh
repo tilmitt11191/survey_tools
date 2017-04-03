@@ -72,3 +72,6 @@ log_info "mysql setting"
 ##table prefix: pg_
 
 #paper_graph:pg
+
+cd $pwd
+exit 0
